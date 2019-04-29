@@ -1,0 +1,85 @@
+Not a single part of a letter should be out of the bounding box
+Not a single part of a letter of other word shoul be inside the bounding box
+Rotated text should be centered by breaking it down into smaller rectangles an then rotating and aligning
+
+Removing background can be achieved using - 
+
+Edge detection?
+Segmentation + CRF
+
+Step by step pipeline
+
+Segmentation
+Blurring
+Unblurring
+Recognition ??
+
+Dataset generation using GANs
+
+Thinking till now - 
+
+Segmentation + Feature generation using UNet -> generating bounding box using UNet(PixelLink) -> LSTM on features generated with UNet to give output as text
+features outside bounding box should be zero
+
+Not a single part of a letter should be out of the bounding box - Does not matter now - Convolution is able to take care of missing some parts as has reception field
+Not a single part of a letter of other word shoul be inside the bounding box - Does not matter now - Convolution in UNet has granularity to ignore outer noise
+Rotated text should be centered by breaking it down into smaller rectangles an then rotating and aligning - No idea how to do it
+
+Removing background can be achieved using - Segmentation + CRF
+
+
+Segmentation - 
+
+Do not need to use max pool. Too much loss in resolution. 
+
+Use FCCNN, with skip connections and 1by1 convolutions.
+Use skip connections directly to the output - 1 convolution layer after dot producting with the same layer extra output
+
+
+
+Final Idea - 
+
+Segmentation using UNet
+Instance segmentation using PixelLink
+Supervised Attention for text-recognition
+Combined training
+
+https://www.onlineocr.net/ - Okayish OCR
+
+
+
+
+19-02-2018
+
+Document - 1000 images using GUI
+Get detection and recognition F-Score on the standard datasets
+Get baseline Google results on the standard dataset
+
+Done
+
+Ablation Studies - With or without link, with/without hard negative mining combination of the two
+ 
+Add hog features in input
+
+remove all max pool or some max pools from resnet
+Multiresolution for training and testing - Actual, Acutal/2, Actual*2
+Change the values of r(weightage of different loss functions) in hard negative mining
+Predict boundary and subtract from output and then find contours
+
+text reco - aspect resize
+Find a way to add blanks to distinguish multiple words to improve detection accuracy
+train_r on output of detection model, blank output means no detection
+
+Think about how to errode stray links (Morphological image processing)
+
+
+
+
+
+
+
+
+
+Too much resolution is being lost in resizing
+Links are not breaking anything. Is there problem in finding connected components or whether links are being predicted wrongly?
+Change to DenseNet

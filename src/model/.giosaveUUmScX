@@ -1,0 +1,381 @@
+import torchvision
+from .u_net_resnet_50_parts import *
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+import torch.optim as optim
+import numpy as np
+import os
+from ..utils import CrossEntropyLoss, get_connected_components, scores
+
+from src.logger import Logger
+log = Logger()
+
+import cv2
+import sys
+import matplotlib.pyplot as plt
+
+class UNetWithResnet50Encoder(nn.Module):
+
+	def __init__(self, config, profiler):
+		
+		super().__init__()
+
+		self.config = config
+		self.profiler = profiler
+		self.DEPTH = 5 #3, 4, 5
+		if config['lossf'] == 'CEL':
+			self.classes = self.config['n_classes']*2
+		elif config['lossf'] == 'DICE':
+			self.classes = self.config['n_classes']
+		self.loss_name = self.config['lossf']
+
+		self.channel_depth = [64, 256, 512, 1024, 2048, 1024, 512, 256, 64, self.config['n_classes']]
+
+		profiler(self.define_architecture, profiler_type="once")
+		
+		self.prev_lr = config['lr'][1]
+
+		if self.config['optimizer'] == 'Adam':
+			log.info('Using Adam optimizer')
+			self.opt = optim.Adam(self.parameters(), lr=config['lr'][1], weight_decay=config['weight_decay'])
+		
+		elif self.config['optimizer'] == 'SGD':
+			log.info('Using SGD optimizer')
+			self.opt = optim.SGD(self.parameters(), lr=config['lr'][1], momentum=config['momentum'], weight_decay=config['weight_decay'])
+
+		if config['lossf'] == 'CEL':
+			log.info('Using CEL')
+			self.lossf = CrossEntropyLoss()
+
+		elif config['lossf'] == 'MSE':
+			log.info('Using MSE')
+			self.lossf = torch.nn.MSELoss()
+		elif config['lossf'] == 'DICE':
+			log.info('Using DICE')
+			self.lossf = self.dice_loss
+
+	def _update_config(self, config):
+
+		self.config = config
+
+	def define_architecture(self):
+
+		resnet = torchvision.models.resnet.resnet50(pretrained=True)
+		
+		self.input_block = nn.Sequential(*list(resnet.children()))[:3]
+		self.input_pool = list(resnet.children())[3]
+		down_blocks = []
+		for bottleneck in list(resnet.children()):
+			if isinstance(bottleneck, nn.Sequential):
+				down_blocks.append(bottleneck)
+		self.down_blocks = nn.ModuleList(down_blocks[0:self.DEPTH+1])
+		del down_blocks
+
+		self.bridge = Bridge(self.channel_depth[self.DEPTH - 1], self.channel_depth[9-self.DEPTH])
+
+		up_blocks = []
+		up_blocks.append(UpBlockForUNetWithResNet50(2048, 1024))
+		up_blocks.append(UpBlockForUNetWithResNet50(1024, 512))
+		up_blocks.append(UpBlockForUNetWithResNet50(512, 256))
+		up_blocks.append(UpBlockForUNetWithResNet50(in_channels=128 + 64, out_channels=128,
+													up_conv_in_channels=256, up_conv_out_channels=128))
+		up_blocks.append(UpBlockForUNetWithResNet50(in_channels=64 + 3, out_channels=64,
+													up_conv_in_channels=128, up_conv_out_channels=64))
+		self.up_blocks = nn.ModuleList(up_blocks[5-self.DEPTH:])
+		del up_blocks
+		
+		self.out = nn.Conv2d(64, self.classes, kernel_size=1, stride=1)
+		self.output = nn.Softmax(dim=1)
+
+		#UNetResNet architecture constructor
+
+	def forward(self, x_big, with_output_feature_map=False):
+
+		output_list = []
+		if with_output_feature_map:
+			output_feature_map_list = []
+
+		for x in x_big:
+			pre_pools = dict()
+			pre_pools["layer_0"] = x
+			x = self.input_block(x)
+			pre_pools["layer_1"] = x
+			x = self.input_pool(x)
+			x = self.down_blocks[0](x)
+			pre_pools["layer_"+str(2)] = x
+
+			for i, block in enumerate(self.down_blocks[1:], 3):
+				x = block(x)
+				
+				if i == (self.DEPTH):
+					break
+				pre_pools["layer_"+str(i)] = x
+
+			x = self.bridge(x)
+
+			for i, block in enumerate(self.up_blocks, 1):
+				
+				key = "layer_"+str(self.DEPTH - i)
+				x = block(x, pre_pools[key])
+
+			output_feature_map = x
+			x = self.out(x)
+			del pre_pools
+
+			if with_output_feature_map:
+				output_list.append(x), output_feature_map_list.append(output_feature_map)
+			else:
+				output_list.append(x)
+
+		if with_output_feature_map:
+			return output_list, output_feature_map_list
+		else:
+			return output_list
+
+	def update_lr(self, no):
+
+		self.dynamic_lr(self.config['lr'], no)
+
+		if no in self.config['lr']:
+			self.set_lr(self.config['lr'][no])
+
+	def set_lr(self, lr):
+
+		if self.prev_lr == lr:
+			pass
+
+		for param_group in self.opt.param_groups:
+			param_group['lr'] = lr
+
+		self.prev_lr = lr
+
+	def dynamic_lr(self, lr, no):
+
+		stage = 1
+
+		for k in lr.keys():
+			if no>k and stage<k:
+				stage = k
+
+		self.set_lr(lr[stage])
+
+	def accuracy_(self, link_pred, segmentation_predicted, data, real_target, contour_target):
+
+		"""
+		link_pred_batch is np array with shape = [1, 16, height, width]
+		Up-left, Up, Up-right, right, Down-right, Down, Down-left, left
+		segmentation_predicted_batch is np array with shape = [1, 2, height, width]
+		data_batch is np array with shape = [1, 3, height, width]
+		real_target_batch is np array with shape = [1, 1, height, width]
+		contour_target_batch is a list of size = [1, contours]
+		"""
+
+		precision_, recall_, f1_score_ = [], [], []
+
+		link_pred = link_pred[0].transpose(1, 2, 0)
+		segmentation_predicted = segmentation_predicted[0].transpose(1, 2, 0)
+		data = data[0].transpose(1, 2, 0)
+		real_target = real_target[0, 0]
+
+		"""
+		link_pred is np array with shape = [height, width, 16]
+		Up-left, Up, Up-right, right, Down-right, Down, Down-left, left
+		segmentation_predicted is np array with shape = [height, width, 2]
+		data is np array with shape = [height, width, 3]
+		real_target is np array with shape = [height, width]
+		config is from read
+		# print(len(contour_pred_dict['contour']))
+
+		"""
+
+		contour_pred_dict = get_connected_components(link_pred, segmentation_predicted, data, real_target, self.config, False)
+
+		precision, recall, f1_score = scores(contour_pred_dict, contour_target[0], threshold=0.5)
+		precision_.append(precision)
+		recall_.append(recall)
+		f1_score_.append(f1_score)
+
+		return np.mean(f1_score_)
+
+	def print_info(self, info):
+
+		log.info('The average accuracy is :', np.mean(info['Acc']))
+		log.info('The current accuracy is :', info['Acc'][-1])
+		log.info('The average loss is :', np.mean(info['Loss']))
+		log.info('The current loss is :', info['Loss'][-1])
+
+		#Saves the various results in logger file
+
+	def save(self, no, epoch_i, info, is_best=False, filename='checkpoint.pth.tar', best={}):
+		
+		if is_best:
+			torch.save({'epoch': epoch_i,
+					'state_dict': self.state_dict(),
+					'optimizer': self.opt.state_dict(),
+					'seed': self.config['seed'],
+					'best': best,},self.config['dir']['Model_Output_Best']+'/'+str(no)+'_'+str(epoch_i)+'_'+filename)
+			torch.save(info, self.config['dir']['Model_Output_Best']+'/'+str(no)+'_'+str(epoch_i)+'_'+'info_'+filename)
+		else:
+			torch.save({'epoch': epoch_i,
+					'state_dict': self.state_dict(),
+					'optimizer': self.opt.state_dict(),
+					'seed': self.config['seed'],
+					'best': best,},self.config['dir']['Model_Output']+'/'+str(no)+'_'+str(epoch_i)+'_'+filename)
+			torch.save(info, self.config['dir']['Model_Output']+'/'+str(no)+'_'+str(epoch_i)+'_'+'info_'+filename)
+
+
+			#Saves the model at regular intervals when called in dl_model
+
+	def load(self, path, path_info, Tr_te):
+
+		checkpoint = torch.load(path)
+
+		self.load_state_dict(checkpoint['state_dict'])
+
+		if not self.config['optimizer_new']:
+			self.opt.load_state_dict(checkpoint['optimizer'])
+
+		if Tr_te == 'train':
+		
+			return checkpoint['epoch'], torch.load(path_info)
+
+		else:
+
+			return checkpoint['epoch'], torch.load(path_info)
+
+		#Loads a pre-trained model
+
+	#Start tracking hard mining
+
+	def hard_negative(self, pred, target, numpy_target_bg, numpy_target_fg):
+
+		loss_seg_temp = self.lossf(pred[:, 0:2], target, override_aggregate='none')
+		sorted_loss = np.argsort(-loss_seg_temp.squeeze().data.cpu().numpy()[numpy_target_bg])
+		r = 3
+		if numpy_target_fg.shape[0]!= 0:
+			num_bg = min(int(r*numpy_target_fg.shape[0]), sorted_loss.shape[0])
+			sorted_loss = sorted_loss[0:min(int(r*numpy_target_fg.shape[0]), sorted_loss.shape[0])]
+		else:
+			num_bg = min(1000, sorted_loss.shape[0])
+			sorted_loss = sorted_loss[0:min(1000, sorted_loss.shape[0])]
+
+		return sorted_loss, loss_seg_temp, num_bg
+
+	#Start trackign link loss
+	def link_loss(self, pred, link, numpy_target_fg, numpy_target_bg, sorted_loss, num_fg, num_bg, weight, loss_seg):
+
+		if numpy_target_fg.shape[0]!= 0:
+
+			# print(num_bg)
+
+			loss_positive = (weight*loss_seg[numpy_target_fg]).sum()/(num_fg + num_bg)
+			loss_negative = loss_seg[numpy_target_bg][sorted_loss].sum()/(num_fg + num_bg)
+
+			loss_seg = 2*(2*loss_positive + loss_negative)
+		else:
+
+			loss_negative = loss_seg[numpy_target_bg][sorted_loss].sum()/(num_fg + num_bg)
+			loss_seg = 2*loss_negative
+
+		if numpy_target_fg.shape[0]!= 0:
+	
+			positive = 0
+			negative = 0
+
+			positive_reduce_sum = 0
+			negative_reduce_sum = 0
+			
+			for i in range(8):
+				
+				temp_loss = weight*self.lossf(pred[numpy_target_fg, 2*i+2:2*i+4], link[:, i], override_aggregate='none')
+				link_ = link.data.cpu().numpy()
+				positive_link = np.where(link_[:,i] == 1)[0]
+				negative_link = np.where(link_[:, i] == 0)[0]
+
+				positive += temp_loss[positive_link].sum()
+				negative += temp_loss[negative_link].sum()
+				
+				positive_reduce_sum += positive_link.shape[0]
+				negative_reduce_sum += negative_link.shape[0]
+
+			loss_link = positive/positive_reduce_sum + negative/negative_reduce_sum
+
+			# print(positive.item(), negative.item(), positive_reduce_sum, negative_reduce_sum, loss_link.item(), loss_seg.item())
+
+			return loss_link + loss_seg
+
+		else:
+
+			return loss_seg
+
+	def loss(self, data_batch_big, pred_big, target_big, link_big, weight_big, contour_big, info):
+
+		loss_c = 0
+
+		link_pred_batch_big = []
+		segmentation_predicted_batch_big = []
+		real_target_batch_big = []
+		numpy_target_fg_big = []
+
+		for data_batch, pred, target, link, weight in zip(data_batch_big, pred_big, target_big, link_big, weight_big):
+			
+			b, ch, h, w = pred.size()
+
+			real_target_batch = target.data.cpu().numpy()
+			real_target_batch_big.append(real_target_batch)
+			target = target.transpose(1, 3).contiguous().view(b*h*w).long()
+			numpy_target = target.data.cpu().numpy()
+			numpy_target_fg = np.where(numpy_target == 1)[0]#Returns numpy array of pixels where text is present
+			#print(numpy_target_fg)
+			numpy_target_fg_big.append(numpy_target_fg)
+			num_fg, num_bg = numpy_target_fg.shape[0], 0
+
+			if numpy_target_fg.shape[0]!= 0:
+
+				link_pred_batch = pred[:, 2:, :, :].data.cpu().numpy()
+				link_pred_batch_big.append(link_pred_batch)
+				link = link.transpose(1, 3).contiguous().view(b*h*w, 8).long()[numpy_target_fg, :]#.view() is like reshape
+
+				#ToDo: change above line and below weights
+				weight = weight.transpose(1, 3).contiguous().view(b*h*w)[numpy_target_fg]
+				#print(weight)
+				#print(torch.mean(weight))
+				#print(torch.min(weight))
+				#time.sleep(5)
+				#Only consider weights where the pixels in target are present in text
+				#Similar for links
+
+			segmentation_predicted_batch = pred[:, 0:2, :, :].data.cpu().numpy()
+			segmentation_predicted_batch_big.append(segmentation_predicted_batch)
+
+			pred = pred.transpose(1, 3).contiguous().view(b*w*h, ch)
+			
+			numpy_target_bg = np.where(numpy_target == 0)[0]
+			#Hard negative mining done. Log here
+			sorted_loss, loss_seg, num_bg = self.profiler(self.hard_negative, pred, target, numpy_target_bg, numpy_target_bg, attr='hard_negative')  
+			#Calculated link loss. Log here
+			loss_c += self.profiler(self.link_loss, pred, link, numpy_target_fg, numpy_target_bg, sorted_loss, num_fg, num_bg, weight, loss_seg, attr='link_loss')
+
+		loss_c = loss_c/len(data_batch)
+
+		if info['Keep_log']:
+
+			# def accuracy_(self, link_pred_batch, segmentation_predicted_batch, data_batch, real_target_batch, contour_target_batch):
+
+			"""
+				link_pred_batch is torch.FloatTensor with shape = [batch_size, 16, height, width]
+				Up-left, Up, Up-right, right, Down-right, Down, Down-left, left
+				segmentation_predicted_batch is torch.FloatTensor with shape = [batch_size, 2, height, width]
+				data_batch is torch.FloatTensor with shape = [batch_size, 3, height, width]
+				real_target_batch is torch.FloatTensor with shape = [batch_size, 1, height, width]
+				contour_target_batch is a list of size = [batch_size, contours]
+			"""
+
+			# info['Acc'].append(self.accuracy(pred[:, 0:2], target))#, contour
+			if info['Count'] >= 0:#75:
+				acc = 0
+				for i in range(len(data_batch_big)):
+
+					if numpy_target_fg_big[i].shape[0]!=0:
+						acc += self.accur

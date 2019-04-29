@@ -1,0 +1,1340 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"she",
+				"shear_prob"
+			],
+			[
+				"ra",
+				"random"
+			],
+			[
+				"a",
+				"augmentation"
+			],
+			[
+				"spe",
+				"spec_char_words"
+			],
+			[
+				"dist",
+				"distort_prob"
+			],
+			[
+				"path",
+				"path_to_save"
+			],
+			[
+				"config_",
+				"config_file_r"
+			],
+			[
+				"test",
+				"test_one"
+			],
+			[
+				"enco",
+				"encoding_to_char"
+			],
+			[
+				"tex",
+				"texts"
+			],
+			[
+				"text",
+				"text"
+			],
+			[
+				"data",
+				"dataset_distribution"
+			],
+			[
+				"all",
+				"all_characters"
+			],
+			[
+				"annot",
+				"annot_with_text"
+			],
+			[
+				"wr",
+				"wrinkle"
+			],
+			[
+				"wrin",
+				"wrinkle_acc"
+			],
+			[
+				"wri",
+				"wrinkle_count"
+			],
+			[
+				"ty",
+				"Type"
+			],
+			[
+				"chan",
+				"channels"
+			],
+			[
+				"tes",
+				"test_data_loader"
+			],
+			[
+				"cach",
+				"cache_path"
+			],
+			[
+				"rand",
+				"random_i"
+			],
+			[
+				"num",
+				"num_channels"
+			],
+			[
+				"dat",
+				"dataset_name"
+			],
+			[
+				"predic",
+				"predicted"
+			],
+			[
+				"choi",
+				"choices"
+			],
+			[
+				"predi",
+				"predicted_final_label"
+			],
+			[
+				"true_lab",
+				"true_labels"
+			],
+			[
+				"datase",
+				"datasets"
+			],
+			[
+				"da",
+				"dataset_name"
+			],
+			[
+				"ima",
+				"images"
+			],
+			[
+				"rando",
+				"random_i"
+			],
+			[
+				"pri",
+				"print"
+			],
+			[
+				"IC1",
+				"IC15"
+			],
+			[
+				"conver",
+				"converter"
+			],
+			[
+				"test_one_im",
+				"test_one_image_r"
+			],
+			[
+				"out",
+				"out_path"
+			],
+			[
+				"resi",
+				"resized_img"
+			],
+			[
+				"pat",
+				"path_to_save"
+			],
+			[
+				"res",
+				"resized_img"
+			],
+			[
+				"datas",
+				"datasets"
+			],
+			[
+				"imag",
+				"images"
+			],
+			[
+				"tar",
+				"targets"
+			],
+			[
+				"dump",
+				"dump_name"
+			],
+			[
+				"targe",
+				"targets"
+			],
+			[
+				"image",
+				"image_root"
+			],
+			[
+				"im",
+				"images"
+			],
+			[
+				"as",
+				"astype"
+			],
+			[
+				"pred",
+				"predicted_final_label"
+			],
+			[
+				"labe",
+				"labels"
+			],
+			[
+				"list",
+				"list_or_tensor"
+			],
+			[
+				"lis",
+				"list_or_tensor"
+			],
+			[
+				"preds",
+				"preds_size"
+			],
+			[
+				"label",
+				"label_lens"
+			],
+			[
+				"trai",
+				"train_data_loader"
+			],
+			[
+				"rnn",
+				"rnn_hidden_size"
+			],
+			[
+				"rnn_",
+				"rnn_num_layers"
+			],
+			[
+				"prin",
+				"print_one"
+			],
+			[
+				"seq",
+				"seq_len"
+			],
+			[
+				"iter",
+				"iteration_"
+			],
+			[
+				"rec",
+				"rect"
+			],
+			[
+				"orig",
+				"orig_annot"
+			],
+			[
+				"mask",
+				"mask_image"
+			],
+			[
+				"right",
+				"right_cheek"
+			],
+			[
+				"left",
+				"left_cheek"
+			],
+			[
+				"outp",
+				"output_path"
+			],
+			[
+				"output",
+				"output"
+			],
+			[
+				"outpu",
+				"output_base"
+			],
+			[
+				"star",
+				"start_no"
+			],
+			[
+				"final",
+				"final_cont"
+			],
+			[
+				"to_re",
+				"to_resize_r"
+			],
+			[
+				"to",
+				"to_resize_c"
+			],
+			[
+				"cal",
+				"calc_weights"
+			],
+			[
+				"fin",
+				"final_h"
+			],
+			[
+				"conto",
+				"contour_f"
+			],
+			[
+				"link",
+				"link_new"
+			],
+			[
+				"targ",
+				"target_new"
+			],
+			[
+				"cont",
+				"contour_i"
+			],
+			[
+				"accura",
+				"accuracy"
+			],
+			[
+				"st",
+				"start_no"
+			],
+			[
+				"loss",
+				"loss_mean"
+			],
+			[
+				"a_",
+				"a_mean"
+			],
+			[
+				"acc",
+				"acc_mean"
+			],
+			[
+				"mode",
+				"model"
+			],
+			[
+				"train",
+				"train_data_loader"
+			],
+			[
+				"spl",
+				"split"
+			],
+			[
+				"images",
+				"images_list"
+			],
+			[
+				"random",
+				"random_images"
+			],
+			[
+				"split",
+				"split_type"
+			],
+			[
+				"tr",
+				"try\tTry/Except"
+			],
+			[
+				"step",
+				"step_no"
+			],
+			[
+				"cur",
+				"curmasks"
+			],
+			[
+				"profiler",
+				"profiler_type"
+			],
+			[
+				"hard",
+				"hard_negative"
+			],
+			[
+				"c",
+				"children"
+			],
+			[
+				"stac",
+				"stack"
+			],
+			[
+				"stack",
+				"stack_copy"
+			],
+			[
+				"pare",
+				"parents"
+			],
+			[
+				"find",
+				"find_parents"
+			],
+			[
+				"conten",
+				"contents_abs"
+			],
+			[
+				"cot",
+				"contents_abs"
+			],
+			[
+				"plot",
+				"plot_counter"
+			],
+			[
+				"attr",
+				"attrs"
+			],
+			[
+				"init",
+				"init_dump"
+			],
+			[
+				"get_all_",
+				"get_all_names_refresh"
+			],
+			[
+				"contents_",
+				"contents_actual"
+			],
+			[
+				"co",
+				"contents_abs"
+			],
+			[
+				"tim",
+				"time"
+			],
+			[
+				"time",
+				"time_gap"
+			],
+			[
+				"con",
+				"contents"
+			],
+			[
+				"writ",
+				"write_path"
+			],
+			[
+				"op",
+				"op_path"
+			],
+			[
+				"ma",
+				"max_wh"
+			],
+			[
+				"imae",
+				"images"
+			],
+			[
+				"ex",
+				"expand_dims"
+			],
+			[
+				"up",
+				"up_text"
+			],
+			[
+				"to_",
+				"to_resize_batch"
+			],
+			[
+				"resiz",
+				"resized"
+			],
+			[
+				"sa",
+				"save_batch"
+			],
+			[
+				"norma",
+				"normal_mean"
+			],
+			[
+				"img",
+				"img_name"
+			],
+			[
+				"indi_",
+				"indi_acc"
+			],
+			[
+				"region",
+				"region_key"
+			],
+			[
+				"chee",
+				"cheek-2"
+			],
+			[
+				"cheek",
+				"cheek-1"
+			],
+			[
+				"regio",
+				"region_to_consider"
+			],
+			[
+				"with",
+				"without_wrinkle"
+			],
+			[
+				"temp",
+				"temp_train_info"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "configs/dataset.yaml",
+			"settings":
+			{
+				"buffer_size": 2843,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "configs/text_config.yaml",
+			"settings":
+			{
+				"buffer_size": 2692,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "main.py",
+			"settings":
+			{
+				"buffer_size": 4199,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/pipeline_manager.py",
+			"settings":
+			{
+				"buffer_size": 9182,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/Dlmodel/Dlmodel.py",
+			"settings":
+			{
+				"buffer_size": 11576,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/model/crnn.py",
+			"settings":
+			{
+				"buffer_size": 4289,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/Dlmodel/TrainTestR.py",
+			"settings":
+			{
+				"buffer_size": 8676,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/Dlmodel/TestOneImageR.py",
+			"settings":
+			{
+				"buffer_size": 2053,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/loader/reco_loader.py",
+			"settings":
+			{
+				"buffer_size": 18523,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/loader/generic_dataloader.py",
+			"settings":
+			{
+				"buffer_size": 17156,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/run/user/1000/gvfs/sftp:host=10.8.70.106,user=mithilesh/home/mithilesh/text/src/prepare_metadata/meta_artificial.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.106,user=mithilesh/home/mithilesh/text/src/model/generic_model.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.122,user=mithilesh/home/mithilesh/text/src/loader/generic_dataloader.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.106,user=mithilesh/home/mithilesh/text/configs/config.yaml",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.106,user=mithilesh/home/mithilesh/text/src/loader/generic_dataloader.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.122,user=mithilesh/home/mithilesh/text/configs/text_config.yaml",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.122,user=mithilesh/home/mithilesh/text/configs/dataset.yaml",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.106,user=mithilesh/home/mithilesh/Desktop/Dhanuka_v2/main.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.106,user=mithilesh/home/mithilesh/Desktop/Dhanuka_v2/src/pipeline_manager.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.106,user=mithilesh/home/mithilesh/Desktop/Dhanuka_v2/src/dl_model.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.106,user=mithilesh/home/mithilesh/Desktop/Dhanuka_v2/test_one_dev.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.106,user=mithilesh/home/mithilesh/Desktop/Dhanuka_v2/templates/index.html",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.106,user=mithilesh/home/mithilesh/Desktop/Dhanuka_v2/api_files/templates/index.html",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.106,user=mithilesh/home/mithilesh/Desktop/Dhanuka_v2/api_meta/templates/index.html",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.122,user=saarthak/home/saarthak/Desktop/Hard_Coded/test_one_dev.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.106,user=mithilesh/home/mithilesh/Desktop/Dhanuka_v2/src/generate_json.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.106,user=mithilesh/home/mithilesh/Desktop/Dhanuka_v2/data_prep/make_results_folder.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.122,user=saarthak/home/Common/Mayank/Text/Segmentation/Dataset/OWN/CheckNeeded/tinker.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.106,user=mithilesh/home/mithilesh/text/main.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.106,user=mithilesh/home/mithilesh/text/src/pipeline_manager.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.106,user=mithilesh/home/mithilesh/text/src/Dlmodel/TestOneImageR.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.122,user=mithilesh/home/mithilesh/Pictures/tinker.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.122,user=saarthak/home/saarthak/Desktop/Hard_Coded/text/src/Dlmodel/TestOneImageRD.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.122,user=saarthak/home/saarthak/Desktop/Hard_Coded/img_blur_file_dev.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.122,user=saarthak/home/saarthak/Desktop/Hard_Coded/text/src/Dlmodel/TestOneImageR.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.122,user=mayank/home/mayank/Desktop/GitRepos/text/configs/text_config.yaml",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.122,user=mayank/home/mayank/Desktop/GitRepos/text/src/Dlmodel/Dlmodel.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.122,user=mayank/home/mayank/Desktop/GitRepos/text/main.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.122,user=mayank/home/mayank/Desktop/GitRepos/text/src/pipeline_manager.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.122,user=mayank/home/mayank/Desktop/GitRepos/text/src/Dlmodel/TestOneImageR.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.122,user=saarthak/home/saarthak/Desktop/Hard_Coded/test_one.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.122,user=saarthak/home/saarthak/Desktop/Hard_Coded/text/main.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.122,user=saarthak/home/saarthak/Desktop/Hard_Coded/text/src/loader/reco_loader.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.106,user=mithilesh/home/mithilesh/text/configs/text_config.yaml",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.106,user=mithilesh/home/mithilesh/text/src/Dlmodel/Dlmodel.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.106,user=mithilesh/home/mithilesh/text/src/loader/reco_loader.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.106,user=mithilesh/home/mithilesh/text/configs/dataset.yaml",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.106,user=mithilesh/home/mithilesh/text/src/Dlmodel/TrainTestR.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.106,user=mithilesh/home/mithilesh/text/src/model/crnn.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.106,user=mithilesh/home/mithilesh/text/src/helper/utils.py",
+		"/run/user/1000/gvfs/sftp:host=13.233.130.83,user=ubuntu/home/ubuntu/autonise-ai.github.io/templates/Consultant/blurring.html",
+		"/run/user/1000/gvfs/sftp:host=13.233.130.83,user=ubuntu/home/ubuntu/autonise-ai.github.io/templates/Consultant/medical.html",
+		"/run/user/1000/gvfs/sftp:host=13.233.130.83,user=ubuntu/home/ubuntu/autonise-ai.github.io/templates/Consultant/WSI.html",
+		"/run/user/1000/gvfs/sftp:host=13.233.130.83,user=ubuntu/home/ubuntu/autonise-ai.github.io/templates/Consultant/text.html",
+		"/run/user/1000/gvfs/sftp:host=13.233.130.83,user=ubuntu/home/ubuntu/autonise-ai.github.io/templates/Consultant/chatbot.html",
+		"/run/user/1000/gvfs/sftp:host=13.233.130.83,user=ubuntu/home/ubuntu/autonise-ai.github.io/templates/Consultant/skincare.html",
+		"/run/user/1000/gvfs/sftp:host=13.233.130.83,user=ubuntu/home/ubuntu/autonise-ai.github.io/templates/products.html",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.106,user=mithilesh/home/mithilesh/Desktop/Dhanuka_v2/src/model/u_net_resnet_50_encoder.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.106,user=mithilesh/home/mithilesh/Desktop/Dhanuka_v2/src/data_loader.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.106,user=mithilesh/home/mithilesh/Desktop/Dhanuka_v2/src/prepare_metadata/metadata.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.106,user=mithilesh/home/mithilesh/Desktop/Dhanuka_v2/configs/config.yaml",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.106,user=mithilesh/home/mithilesh/Desktop/face_segment/src/dl_model.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.106,user=mithilesh/home/mithilesh/Desktop/Dhanuka_v2/Datasets/test/json/19-20-L-T0.json",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.106,user=mithilesh/home/mithilesh/Desktop/Dhanuka_v2/Datasets/test/json/15-17-C-T0 39-C-T0.json",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.106,user=mithilesh/home/mithilesh/Desktop/Dhanuka_v2/Datasets/test/json/09-10-R-T0.json",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.106,user=mithilesh/home/mithilesh/Desktop/Dhanuka_v2/Datasets/train/json/01-08-R-T0.json",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.106,user=mithilesh/home/mithilesh/Desktop/Dhanuka_v2/Datasets/train/json/11-18-L-T0.json",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.106,user=mithilesh/home/mithilesh/Desktop/Dhanuka_v2/Datasets/train/json/annotations1.json",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.106,user=mithilesh/home/mithilesh/Desktop/Dhanuka_v2/Datasets/train/flag.json",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.106,user=mithilesh/home/mithilesh/Desktop/Dhanuka_v2/Datasets/test/flag_data.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.106,user=mithilesh/home/mithilesh/Desktop/Dhanuka_v2/Datasets/test/flag.json",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.106,user=mithilesh/home/mithilesh/Desktop/Dhanuka_v2/Datasets/train/flag_data.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.107,user=mithilesh/home/mithilesh/text/configs/text_config.yaml",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.107,user=mithilesh/home/mithilesh/text/configs/dataset.yaml",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.108,user=mithilesh/home/mithilesh/text/configs/text_config.yaml",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.108,user=mithilesh/home/mithilesh/text/configs/dataset.yaml",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.108,user=mithilesh/home/mithilesh/text/src/model/generic_model.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.108,user=mithilesh/home/mithilesh/text/src/Dlmodel/Dlmodel.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.108,user=mithilesh/home/mithilesh/text/src/Dlmodel/TrainTestR.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.108,user=mithilesh/home/mithilesh/text/src/loader/reco_loader.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.107,user=mithilesh/home/mithilesh/text/src/loader/reco_loader.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.107,user=mithilesh/home/mithilesh/text/src/Dlmodel/Dlmodel.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.107,user=mithilesh/home/mithilesh/text/src/Dlmodel/TrainTestR.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.107,user=mithilesh/home/mithilesh/text/src/helper/utils.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.107,user=mithilesh/home/mithilesh/text/src/model/crnn.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.108,user=mithilesh/home/mithilesh/text/configs/config.yaml",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.107,user=mithilesh/home/mithilesh/text/src/Dlmodel/TestOneImageD.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.108,user=mithilesh/home/mithilesh/text/src/helper/utils.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.107,user=mithilesh/home/mithilesh/text/src/model/generic_model.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.107,user=mithilesh/home/mithilesh/text/src/loader/generic_dataloader.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.108,user=mithilesh/home/mithilesh/text/src/loader/generic_dataloader.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.108,user=mithilesh/home/mithilesh/text/src/model/crnn.py",
+		"/run/user/1000/gvfs/sftp",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.107,user=mithilesh/home/mithilesh/text/src/pipeline_manager.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.107,user=mithilesh/home/mithilesh/text/src/prepare_metadata/prepare_metadata.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.107,user=mithilesh/home/mithilesh/text/src/dl_model/dl_model.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.108,user=mithilesh/home/mithilesh/text/src/dl_model/train_test_r.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.108,user=mithilesh/home/mithilesh/text/src/dl_model/dl_model.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.107,user=mithilesh/home/mithilesh/text/src/loader/dete_loader.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.107,user=mithilesh/home/mithilesh/text/main.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.107,user=mithilesh/home/mithilesh/text/configs/config.yaml",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.113,user=mithilesh/home/mithilesh/text/src/dl_model/dl_model.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.113,user=mithilesh/home/mithilesh/text/src/loader/generic_dataloader.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.113,user=mithilesh/home/mithilesh/text/configs/dataset.yaml",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.113,user=mithilesh/home/mithilesh/text/configs/text_config.yaml",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.113,user=mithilesh/home/mithilesh/text/src/loader/reco_loader.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.113,user=mithilesh/home/mithilesh/text/src/dl_model/train_test_r.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.113,user=mithilesh/home/mithilesh/text/main.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.113,user=mithilesh/home/mithilesh/text/src/helper/utils.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.113,user=mithilesh/home/mithilesh/text/src/dl_model/test_one_image_r.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.113,user=mithilesh/home/mithilesh/text/src/pipeline_manager.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.113,user=mithilesh/home/mithilesh/text/src/model/generic_model.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.113,user=mithilesh/home/mithilesh/text/src/model/crnn.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.113,user=mithilesh/home/mithilesh/crnn.pytorch/utils.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.113,user=mithilesh/home/mithilesh/text/src/prepare_metadata/meta_own.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.113,user=mithilesh/home/mithilesh/Desktop/Dhanuka_v2/src/ensemble.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.113,user=mithilesh/home/mithilesh/Desktop/Dhanuka_v2/src/dl_model.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.113,user=mithilesh/home/mithilesh/text/configs/config.yaml",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.113,user=mithilesh/home/mithilesh/crnn.pytorch/demo.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.113,user=mithilesh/home/mithilesh/crnn.pytorch/train.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.113,user=mithilesh/home/mithilesh/text/src/model/crnn_new.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.113,user=mithilesh/home/mithilesh/crnn.pytorch/models/crnn.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.113,user=mithilesh/home/mithilesh/crnn.pytorch/test/test_utils.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.113,user=mithilesh/home/mithilesh/text/src/model/model_loader.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.107,user=mithilesh/home/mithilesh/crnn.pytorch/models/crnn.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.107,user=mithilesh/home/mithilesh/crnn.pytorch/demo.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.107,user=mithilesh/home/mithilesh/crnn.pytorch/dataset.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.107,user=mithilesh/home/mithilesh/crnn.pytorch/utils.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.107,user=mithilesh/home/mithilesh/crnn.pytorch/tool/convert_t7.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.107,user=mithilesh/home/mithilesh/text/src/model/crnn_new.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.107,user=mithilesh/home/mithilesh/crnn.pytorch/train.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.107,user=mithilesh/home/mithilesh/text/src/dl_model/train_test_r.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.107,user=mithilesh/home/mithilesh/Desktop/Dhanuka_v2/src/prepare_metadata/metadata.py",
+		"/home/mithilesh/Desktop/resizing.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.107,user=mithilesh/home/mithilesh/Desktop/Dhanuka_v2/src/data_loader.py",
+		"/home/mithilesh/text/src/dl_model/train_test_r.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.107,user=mithilesh/home/mithilesh/Desktop/text/src/dl_model/train_test_r.py",
+		"/run/user/1000/gvfs/sftp:host=10.8.70.107,user=mithilesh/home/mithilesh/text/src/dl_model/train_test_d.py"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"save",
+			"imsave",
+			"augment",
+			"Type",
+			"print",
+			"Recognition",
+			"rotate",
+			"min_h",
+			"32",
+			"16",
+			"augmen",
+			"transform",
+			"load",
+			"PreTrained_net",
+			"original_image",
+			"dictio",
+			"dicto",
+			"index",
+			"templ",
+			"Choose",
+			"imsave",
+			"model_best",
+			"rotate",
+			"out_path",
+			"dataset_dis",
+			"self.texts",
+			"not_blank",
+			"print(text",
+			"self.texts",
+			"decode",
+			"encode",
+			"lower",
+			"dict",
+			"lower",
+			"dictio",
+			"img",
+			"whole",
+			"text",
+			"skin",
+			".html",
+			"batch",
+			"update",
+			"basic",
+			"generate",
+			"what_is",
+			"profile_type",
+			"co_ordinates",
+			"update",
+			"config",
+			"update_config",
+			"resize",
+			"resize\\",
+			"resize",
+			"pretr",
+			"seed",
+			"print_i",
+			"own",
+			"text",
+			"print(",
+			"print",
+			"***",
+			"AFTER",
+			"AFTEr",
+			"BEFORE",
+			"exit",
+			"batch",
+			"batch]",
+			"Total #",
+			"Total",
+			"test_cach",
+			"dump",
+			"working",
+			"own",
+			"channel",
+			"channels",
+			"OWN",
+			"base_path",
+			"cache",
+			"cachew",
+			"plot",
+			"resize",
+			"OWN",
+			"here",
+			"1",
+			"label",
+			"decode",
+			"target",
+			"images",
+			"gray",
+			"data_set_extention",
+			"Getting",
+			"batch",
+			"self.test_cache",
+			"****",
+			"******",
+			"self.test_cache",
+			"pbar",
+			"own_cache",
+			"make_tes",
+			"target",
+			"Temp_te",
+			"decode",
+			"    ",
+			"str",
+			"print",
+			"text_resize",
+			"test_entire_folder",
+			"resize",
+			"loader",
+			"self.model_",
+			"save",
+			"plt.imsave",
+			"Aborted",
+			"images",
+			"self.i",
+			"list_or",
+			"exit",
+			"-",
+			"imsave",
+			"batch",
+			"self.dict",
+			"cache",
+			"Total #",
+			"256",
+			"resize",
+			"self.abc",
+			"Latest",
+			"exit"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "configs/dataset.yaml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2843,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								43,
+								43
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/YAML/YAML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 171.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "configs/text_config.yaml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2692,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1981,
+								1981
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/YAML/YAML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1596.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "main.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4199,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1439,
+								1439
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 741.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/pipeline_manager.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9182,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1933,
+								1933
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2451.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/Dlmodel/Dlmodel.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11576,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2539,
+								2539
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1144.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/model/crnn.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4289,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 285.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/Dlmodel/TrainTestR.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8676,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								420,
+								420
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 171.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "src/Dlmodel/TestOneImageR.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2053,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								947,
+								947
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 513.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "src/loader/reco_loader.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 18523,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1785,
+								1785
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "src/loader/generic_dataloader.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 17156,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								9939,
+								9939
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1197.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 186.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"add"
+			]
+		],
+		"width": 592.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

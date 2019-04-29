@@ -1,0 +1,132 @@
+#Yaml file to define hyperparametrs, and to define location of data
+project: Text_Recognition
+
+name: CRNN
+conv: orig #orig or reset
+
+loader: reco
+
+Profiler:
+  reset: True
+
+dir:
+  # Test_one: Exp/test_one_images
+  Exp: Exp/Reco
+  Profiler: Exp/Reco/Profiler_Text
+  # Output: Exp/Temporary_Text
+  # Output_Best: Exp/Best_Text
+  Model_Output: Exp/Reco/Models_Text
+  Model_Output_Best: Exp/Reco/Models_Best_Text
+  Temp_save: Exp/Reco/Temp_save
+  Temp_test_save: Exp/Reco/Temp_test_save
+  # Model_Output: /media/mayank/0b40607e-7efc-4216-b12f-8bb86facfaed/Text/Models
+  # Model_Output_Best: /media/mayank/0b40607e-7efc-4216-b12f-8bb86facfaed/Text/Models_Best
+  # Ensemble_Output: Exp/Ensemble_Output_Text
+  Plots: Exp/Reco/Plots_Text
+  test_one: Exp/Reco/test_one
+
+test_one:
+  transform: False
+  batch_size: 20
+  cpu_alloc: 1
+  Type: test_one
+  loader:
+    flag: False
+  # dir: /home/Common/Mayank/Text/test_one_images
+  dir: Exp/Reco/test_one_images_text
+
+train:
+  transform: False
+  batch_size: 50
+  cpu_alloc: 1
+  Type: train
+  loader:
+    flag: False  
+
+test:
+  transform: False
+  batch_size: 100
+  cpu_alloc: 1
+  Type: test
+  loader:
+    flag: False
+
+
+target_transform: False
+retrain: True
+
+grayscale: False 
+
+test_display: 3 #No of examples to display during testing
+model_save_iter: 1000
+
+test_now: 100
+update_config: 40
+
+around_bound: 2 #on two sides
+img_h: 32
+min_h: 24
+varying_width: True
+steps: 300000
+profiler_dump_steps: 10000
+
+lr:
+  1: 0.001
+  5000: 0.0005
+  12500: 0.00025
+  25000: 0.000125
+  50000: 0.0000625
+
+momentum: 0.9
+weight_decay: 5.0e-4
+
+optimizer: Adam
+optimizer_new: False   #If want to refresh the optimizer parameters(Like when shifting optimizers from Adam to SGD or vice versa)
+lossf: CTC
+weighted_lossf_parameter : 0.5
+
+cuda: True
+
+PreTrained_net: False
+PreTrained_path: '/home/Common/Mayank/Text/Segmentation/Model/'
+
+PreTrained_model:
+  
+  while_testing: True
+  check: True
+
+  checkpoint: Exp/Reco/Models_Text/26000_42_checkpoint.pth.tar
+  checkpoint_info: Exp/Reco/Models_Text/26000_42_info_checkpoint.pth.tar
+
+  # checkpoint: /media/mayank/0b40607e-7efc-4216-b12f-8bb86facfaed/Text/Models_Best/0_0_checkpoint.pth.tar
+  # checkpoint_info: /media/mayank/0b40607e-7efc-4216-b12f-8bb86facfaed/Text/Models_Best/0_0_info_checkpoint.pth.tar
+  checkpoint_best: Exp/Reco/Models_Best_Text/0_checkpoint.pth.tar
+  checkpoint_best_info: Exp/Reco/Models_Best_Text/0_info_checkpoint.pth.tar
+
+
+augmentation:
+  #implemented in the resize funtion in reco_loader
+  flag: True
+  brightness: 0.1
+  contrast: 0.1
+  saturation: 0.1
+  hue: 0.1
+
+  vertical_flip_prob: 0.1
+  horizontal_flip_prob: 0.1
+
+  distort_prob: 0.2
+  horizontal_tiles: 8
+  vertical_tiles: 3
+  magnitude: 3
+
+  shear_prob: 0.1
+  shear_mag: 0.3
+
+  imagenet_no: 1
+  art_prob_train: 0
+  art_prob_test: 0
+
+  font_range: [30, 50]
+  border_range: [0, 0, 0, 0] #height_min, height_max, width_min, width_height
+  

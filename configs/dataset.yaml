@@ -1,0 +1,76 @@
+dataset_train: [OWN]
+dataset_test: [OWN]
+
+seed: 2
+
+cache: True
+cache_path: /home/Common/Datasets_SSD/Dataset_Text
+
+metadata:
+  # COCO:
+  #   dir: /home/Common/Datasets_SSD/Dataset_Text/COCO
+  #   image: /home/Common/Datasets_SSD/Dataset_Text/COCO/Images
+  #   label: /home/Common/Datasets_SSD/Dataset_Text/COCO/Labels
+  #   meta: /home/Common/Datasets_SSD/Dataset_Text/COCO/Meta
+  #   contour_length_thresh_min: 10
+  #   contour_area_thresh_min: 300
+  #   segmentation_thresh: 0.7
+  #   link_thresh: 0.7
+  #   background_all: False
+  #   cal_avg: False
+  #   split_type: '0.8' #orig
+  IC13:
+    dir: /home/Common/Datasets_SSD/Dataset_Text/IC13
+    image: /home/Common/Datasets_SSD/Dataset_Text/IC13/Images
+    label: /home/Common/Datasets_SSD/Dataset_Text/IC13/Labels
+    meta: /home/Common/Datasets_SSD/Dataset_Text/IC13/Meta
+    contour_length_thresh_min: 10
+    contour_area_thresh_min: 300
+    segmentation_thresh: 0.7
+    link_thresh: 0.7
+    cal_avg: False
+    split_type: '0.8' #orig
+  IC15:
+    dir: /home/Common/Datasets_SSD/Dataset_Text/IC15
+    image: /home/Common/Datasets_SSD/Dataset_Text/IC15/Images
+    label: /home/Common/Datasets_SSD/Dataset_Text/IC15/Labels
+    meta: /home/Common/Datasets_SSD/Dataset_Text/IC15/Meta
+    contour_length_thresh_min: 10
+    contour_area_thresh_min: 300
+    segmentation_thresh: 0.5
+    link_thresh: 0.5
+    cal_avg: False
+    split_type: '0.9' #orig
+  SYNTH:
+    dir: /home/Common/Datasets_SSD/Dataset_Text/SYNTH
+    image: /home/Common/Datasets_SSD/Dataset_Text/SYNTH/Images
+    label: /home/Common/Datasets_SSD/Dataset_Text/SYNTH/Labels
+    meta: /home/Common/Datasets_SSD/Dataset_Text/SYNTH/Meta
+    contour_length_thresh_min: 10
+    contour_area_thresh_min: 300
+    segmentation_thresh: 0.7
+    link_thresh: 0.7
+    cal_avg: False
+    split_type: '0.8' #orig
+  OWN:
+    dir: /home/Common/Datasets_SSD/Dataset_Text/OWN/CheckNeeded
+    image: /home/Common/Datasets_SSD/Dataset_Text/OWN/CheckNeeded/Images
+    label: /home/Common/Datasets_SSD/Dataset_Text/OWN/CheckNeeded/Labels
+    meta: /home/Common/Datasets_SSD/Dataset_Text/OWN/CheckNeeded/Meta
+    contour_length_thresh_min: 10
+    contour_area_thresh_min: 300
+    segmentation_thresh: 0.7
+    link_thresh: 0.7
+    cal_avg: False
+    split_type: '0.8' #orig
+  ART:
+    dir: /home/Common/Datasets_SSD/Dataset_Text/ART
+    image: /home/Common/Datasets_SSD/Dataset_Text/ART/Images
+    label: /home/Common/Datasets_SSD/Dataset_Text/ART/Labels
+    meta: /home/Common/Datasets_SSD/Dataset_Text/ART/Meta
+    contour_length_thresh_min: 10
+    contour_area_thresh_min: 300
+    segmentation_thresh: 0.7
+    link_thresh: 0.7
+    cal_avg: False
+    split_type: '0.8' #orig

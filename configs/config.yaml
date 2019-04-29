@@ -1,0 +1,143 @@
+#Yaml file to define hyperparametrs, and to define location of data
+project: Text_Detection
+
+name: UNet_Resnet_50 # UNet #
+
+dataloader: Own
+aspect_resize: 1-0.5-2 # constant # 1-0.5-2 # scale_two
+
+hard_negative_mining: True
+class_weight: [0.2, 0.8]
+link: True
+weight_bbox: True
+gradient: False
+n_channels: 3
+
+Profiler:
+  reset: True
+
+ratio: 3
+weight_threshold: 0.7
+min_bg: 1000
+sed_link: 2
+pos_neg: 2
+
+
+max_size: 512 # For 32_2 aspect resize in dataloader
+# image_size: 256 # For Square dataloader
+
+# ensemble:
+#   1: Exp/All_results/Best_overall_result
+#   # 2: Exp/All_results/Best_Patches
+#   3: Exp/All_results/Best_Spots
+#   # 4: Exp/All_results/Best_Wrinkle
+# ensemble_way: max_voting # avg_voting
+
+target_transform: False
+retrain: True
+
+# Logging
+
+accuracy_log: 100
+show_some: 100
+log_interval_steps: 500
+test_now: 500
+update_config: 10
+save_test_image: 100
+
+# Parameters
+
+lr:
+  1: 0.000005
+  100: 0.000005
+  5000: 0.000005
+  8000: 0.000005
+  
+momentum: 0.9
+weight_decay: 5.0e-4
+
+optimizer: Adam
+optimizer_new: False   #If want to refresh the optimizer parameters(Like when shifting optimizers from Adam to SGD or vice versa)
+lossf: CEL
+weighted_lossf_parameter : 0.5
+depth: 5
+
+cuda: True
+seed: 2
+
+steps: 25000
+
+PreTrained_net: True
+
+PreTrained_model:
+
+  while_testing: True
+  check: True
+
+  checkpoint: /home/mayank/Desktop/GitRepos/text/Exp/Detection/Models_Best/0_checkpoint.pth.tar
+  checkpoint_info: /home/mayank/Desktop/GitRepos/text/Exp/Detection/Models_Best/0_info_checkpoint.pth.tar
+
+  checkpoint_best: /home/mayank/Desktop/GitRepos/text/Exp/Detection/Models_Best/0_checkpoint.pth.tar
+  checkpoint_best_info: /home/mayank/Desktop/GitRepos/text/Exp/Detection/Models_Best/0_info_checkpoint.pth.tar
+
+aug_flag: True
+
+augmentation:
+
+  brightness: 0.1
+  contrast: 0.1
+  saturation: 0.1
+  hue: 0.1
+  rotation: [0.8, 0.07, 0.07, 0.06]
+  crop_range: [0.1,1]
+  grey_scale: 0.1
+  intensity:
+    prob: 0.5
+    max: 1.6
+    min: 0.4
+  blur:
+    prob: 0.1
+    divide: 800
+  invert: 0.1
+  random_channel_shift: 0.2
+
+dir:
+  # Test_one: Exp/test_one_images
+  Exp: Exp/Detection
+  Profiler: Exp/Detection/Profiler
+  # Output: Exp/Temporary
+  # Output_Best: Exp/Best
+  Model_Output: Exp/Detection/Models
+  Model_Output_Best: Exp/Detection/Models_Best
+  # Model_Output: /media/mayank/0b40607e-7efc-4216-b12f-8bb86facfaed/Text/Models
+  # Model_Output_Best: /media/mayank/0b40607e-7efc-4216-b12f-8bb86facfaed/Text/Models_Best
+  # Ensemble_Output: Exp/Ensemble_Output
+  Plots: Exp/Detection/Plots
+  Test_sample: Exp/Detection/Output_Test
+  Train_sample: Exp/Detection/Output_Train
+
+test_one:
+  transform: False
+  batch_size: 5
+  cpu_alloc: 1
+  Type: test_one
+  loader:
+    flag: False
+  # dir: /home/Common/Mayank/Text/test_one_images
+  dir: Exp/Detection/test_one_images
+
+train:
+  transform: True
+  batch_size: 1
+  cpu_alloc: 1
+  Type: train
+  loader:
+    flag: False  
+
+test:
+  transform: False
+  batch_size: 1
+  cpu_alloc: 1
+  Type: test
+  loader:
+    flag: False
