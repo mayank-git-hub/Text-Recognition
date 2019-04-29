@@ -37,10 +37,6 @@ There should be a logger function which stores the time-stamp of each output in 
 The "work" should be saved such that worst case scenario only 5 mins of work is lost. 
 *Care should be taken not to store the "work" too often which would cause harddisk overload*
 
-#BitBucket - 
-
-All codes should be kept uploaded on bitbucket. Everyone should be familiar with the basics of git.
-
 #Misc - 
 
 All the other "things" which has not been mentioned in the pipeline can be kept in the folder misc
