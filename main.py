@@ -51,14 +51,15 @@ def test_r():
 	pipeline_manager.test_r()
 
 
-@main.command()
-def test_rd():
-	"""
-	Testing Pretrained Recognition and Detection Model on a folder structure as mentioned in config.yaml
-	Can Run on images of varying size and extension
-	"""
-
-	pipeline_manager.test_rd()
+# Implement this function
+# @main.command()
+# def test_rd():
+# 	"""
+# 	Testing Pre-trained Recognition and Detection Model on a folder structure as mentioned in config.yaml
+# 	Can Run on images of varying size and extension
+# 	"""
+#
+# 	pipeline_manager.test_rd()
 
 
 @main.command()
