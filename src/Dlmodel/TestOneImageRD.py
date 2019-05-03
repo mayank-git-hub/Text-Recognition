@@ -1,15 +1,11 @@
-from .Dlmodel import Dlmodel
-from ..helper.logger import Logger
-from ..helper.utils import get_connected_components
-import torch
-import time
-import random
 import numpy as np
-import editdistance
-from .TestOneImageR import TestOneImageRClass
-from .TestOneImageD import TestOneImageDClass
-import matplotlib.pyplot as plt
+import torch
 from PIL import Image
+
+from .TestOneImageD import TestOneImageDClass
+from .TestOneImageR import TestOneImageRClass
+from ..helper.logger import Logger
+
 log = Logger()
 
 class TestOneImageRDClass():
@@ -54,6 +50,8 @@ class TestOneImageRDClass():
 
 				self.one_rec.model.eval()
 				out = ['' for all_ in all_cropped]#self.one_rec.model(all_, decode=True)[1][0]
+
+				# ToDo replace '' by actual value when recognition model is working
 
 				return contours, out
 
