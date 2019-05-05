@@ -10,7 +10,7 @@
 
   Every function should have inital comments in the following format
   
-	  1-3 Line description of the function
+    1-3 Line description of the function
     :input:
       :param parameter1: Description of parameter1
       :param parameter2: Description of parameter2
@@ -48,3 +48,7 @@
 # Misc - 
 
   All the other "things" which has not been mentioned in the pipeline can be kept in the folder misc
+  
+# DockerFile - 
+  
+  After every version a docker file should be generated of the entire model
