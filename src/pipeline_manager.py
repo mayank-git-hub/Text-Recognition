@@ -20,6 +20,7 @@ class PipelineManager:
 			self.config_file_d: Contains the dynamic and static attributes related to Detection Model
 			self.config_file_r: Contains the dynamic and static attributes related to Recognition Model
 			self.config_dataset: Contains static attributes related to Dataset
+
 		The Functions of the class are self explanatory. Hence no commenting needed.
 		"""
 
@@ -111,6 +112,7 @@ def train_d(config, profiler):
 
 
 def train_r(config, profiler):
+
 	"""
 	Have a look at main.py for description
 
@@ -129,6 +131,7 @@ def train_r(config, profiler):
 
 
 def test_d(config, profiler):
+
 	"""
 	Have a look at main.py for description
 
@@ -144,6 +147,7 @@ def test_d(config, profiler):
 
 
 def test_r(config, profiler):
+
 	"""
 	Have a look at main.py for description
 
@@ -159,6 +163,7 @@ def test_r(config, profiler):
 
 
 def test_one_r(config, path, out_path, profiler):
+
 	"""
 	Have a look at main.py for description
 
@@ -175,6 +180,7 @@ def test_one_r(config, path, out_path, profiler):
 
 
 def test_entire_folder_r(config_file_r, path, out_path, profiler):
+
 	"""
 	Have a look at main.py for description
 
@@ -195,6 +201,7 @@ def test_entire_folder_r(config_file_r, path, out_path, profiler):
 
 
 def test_one_rd(config_r, config_d, path, out_path, profiler):
+
 	"""
 	Have a look at main.py for description
 
@@ -217,6 +224,7 @@ def test_one_rd(config_r, config_d, path, out_path, profiler):
 
 
 def test_entire_folder_rd(config_r, config_d, ipath, opath, profiler):
+
 	"""
 	Have a look at main.py for description
 
@@ -281,6 +289,7 @@ def test_entire_folder_rd(config_r, config_d, ipath, opath, profiler):
 
 
 def test_one_d(config, path, out_path, profiler):
+
 	"""
 	Have a look at main.py for description
 
@@ -297,6 +306,7 @@ def test_one_d(config, path, out_path, profiler):
 
 
 def test_entire_folder_d(config, ipath, opath, profiler):
+
 	"""
 	Have a look at main.py for description
 
@@ -348,6 +358,7 @@ def test_entire_folder_d(config, ipath, opath, profiler):
 
 
 def prepare_metadata(config, profiler):
+
 	"""
 	Have a look at main.py for description
 
