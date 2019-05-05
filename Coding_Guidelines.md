@@ -1,8 +1,8 @@
 # Naming - 
 
-  All class names should follow "CamelHump" naming style
-  All file name should follow "this_naming_style"
-  All function name should follow "verySimilarToCamelHump" style
+    All class names should follow "CamelHump" naming style
+    All file name should follow "this_naming_style"
+    All function name should follow "verySimilarToCamelHump" style
   
   ToDo - Naming is not being followed
 
