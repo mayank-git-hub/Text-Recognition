@@ -14,10 +14,34 @@ b) Link prediction.
 
 This approach sets it apart from other kinds of methodologies used so far for text detection. Before PixelLink, the SOTA approaches on text detection does two kinds of prediction: a) Text/non-text prediction, b) Location Regression. Here both of these predictions are made at one go taking many fewer number of iterations and less training data.
 
+## Demo([Youtube Link](https://www.youtube.com/watch?v=3d3J0kH3u6c))
+
+## Results: If numerical, mention them in tabular format. If visual, display. If you've done a great project, this is the area to show it! ToDo
+
 ## A list of code dependencies.
 
 All Code dependencies are present in the file requirements.txt
 Run "pip install -r requirements.txt" to install all dependencies
+
+## Code Structure
+.
++-- _config.yml
++-- _drafts
+|   +-- begin-with-the-crazy-ideas.textile
+|   +-- on-simplicity-in-technology.markdown
++-- _includes
+|   +-- footer.html
+|   +-- header.html
++-- _layouts
+|   +-- default.html
+|   +-- post.html
++-- _posts
+|   +-- 2007-10-29-why-every-programmer-should-play-nethack.textile
+|   +-- 2009-04-26-barcamp-boston-4-roundup.textile
++-- _data
+|   +-- members.yml
++-- _site
++-- index.html
 
 ## Instructions to run the code
 
@@ -75,12 +99,9 @@ Run "pip install -r requirements.txt" to install all dependencies
 	2. Configure the path of the model in the field "PreTrained_Model"
 	3. Run the command `python main.py test_entire_folder_d -p <path-to-test-folder> -o <path-to-output-folder>`
 
-## If your code requires a model that can't be provided on GitHub, store it somewhere else and provide a download link.
+## If your code requires a model that can't be provided on GitHub, store it somewhere else and provide a download link. ToDo
 
-## Results: If numerical, mention them in tabular format. If visual, display. If you've done a great project, this is the area to show it!
-
-## Additional details, discussions, etc.
-
+## Additional details, discussions, etc. ToDo
 
 ## References.
 * Deng, Dan, et al. "Pixellink: Detecting scene text via instance segmentation." Thirty-Second AAAI Conference on Artificial Intelligence. 2018.
