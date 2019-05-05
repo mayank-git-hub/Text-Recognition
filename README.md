@@ -20,7 +20,7 @@ This approach sets it apart from other kinds of methodologies used so far for te
 
 ## A list of code dependencies.
 
-All Code dependencies are present in the file requirements.txt
+All Code dependencies are present in the file requirements.txt<br/>
 Run "pip install -r requirements.txt" to install all dependencies
 
 ## Code Structure
