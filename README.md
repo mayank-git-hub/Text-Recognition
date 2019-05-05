@@ -1,4 +1,4 @@
-#Pytorch Implementation of [Pixel-LINK](https://arxiv.org/pdf/1801.01315.pdf)
+# Pytorch Implementation of [Pixel-LINK](https://arxiv.org/pdf/1801.01315.pdf)
 
 ## Instructions to run the code
 
@@ -33,24 +33,24 @@
 
 	7. Run python main.py prepare_metadata
 
-###Training your own model(Detection)
+### Training your own model(Detection)
 	
 	1. The configs/config.yaml contains all the hyper-parameters for training the detection model.
 	2. After your dataset and config file is in place run the command `python main.py train_d`
 
-###Testing your own model(Detection)
+### Testing your own model(Detection)
 	
 	1. In the configs/config.yaml in the field "PreTrained_model" change the value of the field "check" to True
 	2. Configure the path of the model in the field "PreTrained_Model"
 	3. After your dataset and config file is in place run the command `python main.py test_d`
 
-###Generate Visual Results on a single image
+### Generate Visual Results on a single image
 
 	1. In the configs/config.yaml in the field "PreTrained_model" change the value of the field "check" to True
 	2. Configure the path of the model in the field "PreTrained_Model"
 	3. Run the command `python main.py test_one_d -p <path-to-test-image> -o <path-to-folder-output>`
 
-###Generate Visual Results on an entire folder
+### Generate Visual Results on an entire folder
 
 	1. In the configs/config.yaml in the field "PreTrained_model" change the value of the field "check" to True
 	2. Configure the path of the model in the field "PreTrained_Model"
