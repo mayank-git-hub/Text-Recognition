@@ -161,6 +161,6 @@ ToDo Remove some files and add description of all files below in the code struct
 * Ren, Mengye, and Richard S. Zemel. "End-to-end instance segmentation with recurrent attention." Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2017.
 * Girshick, Ross. "Fast r-cnn." Proceedings of the IEEE international conference on computer vision. 2015.
 
-This repository is currently into active development. Do raise issues and we will solve them as soon as possible.
+## This repository is currently into active development. Do raise issues and we will solve them as soon as possible.
 
-Public Board on Trello - https://trello.com/b/V26dOOOB
+## Public Board on Trello - https://trello.com/b/V26dOOOB
