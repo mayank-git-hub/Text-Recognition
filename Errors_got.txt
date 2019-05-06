@@ -1,1 +1,0 @@
-TypeError: 'ScannerError' object is not subscriptable - When the configs/config.yaml file has some error
