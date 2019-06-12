@@ -152,7 +152,7 @@ ToDo Remove some files and add description of all files below in the code struct
 
 ## Pretrained Model
 	
-	* Request access to a pretrained model - https://drive.google.com/open?id=1kKyZ5DKNPUTGlK4lBZH862ZjcTApneuM
+Request access to a pretrained model - Write a mail to mayankkumarsingh@autonise.com stating your affiliations and purpose for using the model.
 
 ## Additional details, discussions, etc. ToDo
 
