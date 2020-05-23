@@ -154,8 +154,6 @@ ToDo Remove some files and add description of all files below in the code struct
 	
 Request access to a pretrained model - Write a mail to mayankkumarsingh@autonise.com stating your affiliations and purpose for using the model.
 
-## Additional details, discussions, etc. ToDo
-
 ## References.
 * Deng, Dan, et al. "Pixellink: Detecting scene text via instance segmentation." Thirty-Second AAAI Conference on Artificial Intelligence. 2018.
 * Karatzas, Dimosthenis, et al. "ICDAR 2015 competition on robust reading." 2015 13th International Conference on Document Analysis and Recognition (ICDAR). IEEE, 2015.
