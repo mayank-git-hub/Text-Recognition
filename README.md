@@ -162,7 +162,3 @@ Request access to a pretrained model - Write a mail to mayankkumarsingh@autonise
 * VGG Synth Text in the wild: A. Gupta, A. Vedaldi, A. Zisserman "Synthetic Data for Text Localisation in Natural Images" IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2016
 * Ren, Mengye, and Richard S. Zemel. "End-to-end instance segmentation with recurrent attention." Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2017.
 * Girshick, Ross. "Fast r-cnn." Proceedings of the IEEE international conference on computer vision. 2015.
-
-## This repository is currently into active development. Do raise issues and we will solve them as soon as possible.
-
-## Public Board on Trello - https://trello.com/b/V26dOOOB
