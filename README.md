@@ -153,6 +153,7 @@ ToDo Remove some files and add description of all files below in the code struct
 ## Pretrained Model
 	
 Request access to a pretrained model - Write a mail to mayank2220singh@gmail.com stating your affiliations and purpose for using the model.
+Edit - As it has been a long time since I worked on PixelLink, the pretrained model has been lost.
 
 ## References.
 * Deng, Dan, et al. "Pixellink: Detecting scene text via instance segmentation." Thirty-Second AAAI Conference on Artificial Intelligence. 2018.
