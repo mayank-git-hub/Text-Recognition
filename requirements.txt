@@ -6,7 +6,7 @@ matplotlib==3.0.2
 networkx==1.11
 requests==2.19.1
 datetime
-opencv-python==4.0.0.21
+opencv-python==4.1.1.26
 pillow
 networkx==1.11
 requests==2.20.0
