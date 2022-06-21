@@ -1,7 +1,7 @@
 click==6.7
 torch==1.0.1.post2
 torchvision==0.2.2.post3
-numpy==1.14.5
+numpy==1.22.0
 matplotlib==3.0.2
 networkx==1.11
 requests==2.19.1
