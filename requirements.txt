@@ -4,7 +4,7 @@ torchvision==0.2.2.post3
 numpy==1.22.0
 matplotlib==3.0.2
 networkx==1.11
-requests==2.19.1
+requests==2.20.0
 datetime
 opencv-python==4.2.0.32
 pillow
