@@ -9,5 +9,5 @@ datetime
 opencv-python==4.2.0.32
 pillow
 networkx==1.11
-requests==2.20.0
+requests==2.31.0
 werkzeug
